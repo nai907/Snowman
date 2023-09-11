@@ -60,6 +60,4 @@ def h3(s):
     for idx in range(0, 9):
       if board[idx] not in goal2[idx%3]:
         res += 1
-
-    print(board, res)
     return res
