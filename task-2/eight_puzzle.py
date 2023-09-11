@@ -49,6 +49,17 @@ def h1(s):
     return res
 
 def h3(s):
-    # implement this function
+    goal1 = ((1, 2, 3), (4, 5, 6), (7, 8, 0))
+    goal2 = ((1, 4, 7), (2, 5, 8), (3, 6, 0))
     board, _, _ = s
-    return 0
+    res = 0
+    # implement this function
+    for idx in range(0, 9):
+      if board[idx] not in goal1[idx//3]:
+        res += 1
+    for idx in range(0, 9):
+      if board[idx] not in goal2[idx%3]:
+        res += 1
+
+    print(board, res)
+    return res
